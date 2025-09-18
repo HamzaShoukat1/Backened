@@ -1,0 +1,12 @@
+{
+  "name": "backened1",
+  "version": "1.0.0",
+  "description": " a backened",
+  "license": "ISC",
+  "author": "Hamza",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
