@@ -1,19 +1,29 @@
 {
   "name": "backened1",
   "version": "1.0.0",
-  "description": " a backened",
+  "description": "a backend",
   "license": "ISC",
   "author": "Hamza",
   "type": "module",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "start": "nodemon -r dotenv/config --experimental-json-modules src/index.js"
+    "dev": "nodemon --exec node --loader ts-node/esm -r dotenv/config src/index.ts",
+    "build": "tsc",
+    "start": "node -r dotenv/config dist/index.js"
   },
   "devDependencies": {
+    "@types/cookie-parser": "^1.4.9",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.3",
+    "@types/node": "^24.5.2",
     "nodemon": "^3.1.10",
-    "prettier": "^3.6.2"
+    "prettier": "^3.6.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.2"
   },
   "dependencies": {
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
     "dotenv": "^17.2.2",
     "express": "^5.1.0",
     "mongoose": "^8.18.1"
